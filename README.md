@@ -8,10 +8,11 @@ Create a new directory e.g. pyfinmarkets.  Download the files into a new directo
 Open and edit the ticsymbol.conf file, remove and add ticker symbols to this file.  ( symbols should be space separated )
 
 How to run:
-( make the .py file and .sh files are executable:   "chmod +x api_call_yahoo.py" )
+( make sure the .py file and .sh files are executable:   "chmod +x api_call_yahoo.py" )
 
 Open a terminal window.  Type in at the command prompt:  python3 ./api_call_yahoo.py  
-This will run the python script once.  If you would like to run it with a refresh rate of 150 seconds, run the bash script.  This uses the 'watch' package ( you may need to install it ) and will run the api_call_yahoo.py script every 150 seconds.
+This will run the python script once.  If you would like to run it with auto refresh, run the bash script - default refresh is every 150 seconds.  This uses the 'watch' package ( you may need to install it ) and will run the api_call_yahoo.py script every 150 seconds.
+FYI:  you can edit the ticsymbol.conf file while the bash script is running in continous mode.  You will see the changes in the next refresh. 
 
  NOTE:  Do not lower the '150' seconds too low, you may get blocked from calling the Yahoo Finance API.
 
